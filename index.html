@@ -174,6 +174,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--paper);color:var(
   <button class="navbtn" onclick="showTab('cashflow',this)">Cashflow</button>
   <button class="navbtn" onclick="showTab('expenses',this)">All Expenses</button>
   <button class="navbtn" onclick="showTab('debt',this)">Debt</button>
+  <button class="navbtn" onclick="showTab('goals',this)">Goals</button>
 </div>
 
 <!-- ═══════════════ OVERVIEW ═══════════════ -->
@@ -190,8 +191,8 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--paper);color:var(
       <div class="kpi-s">Brian $6,110 · Mari $7,213<br>3-paycheck mo: $16,097</div>
       <div class="pill py">combined household</div></div>
     <div class="kpi"><div class="kpi-a" style="background:#8ab0f0"></div>
-      <div class="kpi-l">Monthly Expenses</div><div class="kpi-v">$8,614</div>
-      <div class="kpi-s">Brian $3,368 · Mari $3,956<br>Shared $568 · +$822 payroll</div>
+      <div class="kpi-l">Monthly Expenses</div><div class="kpi-v">$8,864</div>
+      <div class="kpi-s">Brian $3,368 · Mari $3,956<br>Shared $818 · +$822 payroll</div>
       <div class="pill pb">36 line items tracked</div></div>
     <div class="kpi"><div class="kpi-a" style="background:var(--red)"></div>
       <div class="kpi-l">Consumer Debt</div><div class="kpi-v">$24,309</div>
@@ -204,7 +205,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--paper);color:var(
       <div class="sl">Monthly by owner</div>
       <div class="crow"><div class="clabel"><span class="db"></span>Brian cash out</div><div class="cbt"><div class="cbf" style="width:100%;background:var(--ink)"></div></div><div class="camt">$3,368</div></div>
       <div class="crow"><div class="clabel"><span class="dm"></span>Mari</div><div class="cbt"><div class="cbf" style="width:84.4%;background:var(--gold)"></div></div><div class="camt">$3,956</div></div>
-      <div class="crow"><div class="clabel"><span class="ds"></span>Shared</div><div class="cbt"><div class="cbf" style="width:12%;background:var(--green)"></div></div><div class="camt">$568</div></div>
+      <div class="crow"><div class="clabel"><span class="ds"></span>Shared</div><div class="cbt"><div class="cbf" style="width:12%;background:var(--green)"></div></div><div class="camt">$818</div></div>
       <div class="crow"><div class="clabel"><span class="dp"></span>401k (payroll)</div><div class="cbt"><div class="cbf" style="width:17.3%;background:var(--ink4)"></div></div><div class="camt">$822</div></div>
       <div style="border-top:1.5px solid var(--paper3);margin-top:10px;padding-top:10px;display:flex;justify-content:space-between;font-weight:600;font-size:14px"><span>Total</span><span style="font-family:'DM Mono',monospace">$8,614</span></div>
 
@@ -225,7 +226,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--paper);color:var(
           <div class="alloc" style="border-left-color:var(--red)"><div style="font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink3);margin-bottom:4px">Debt extra</div><div style="font-family:'DM Serif Display',serif;font-size:20px">$2,000</div></div>
           <div class="alloc" style="border-left-color:var(--gold)"><div style="font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink3);margin-bottom:4px">E-fund</div><div style="font-family:'DM Serif Display',serif;font-size:20px">$1,000</div></div>
           <div class="alloc" style="border-left-color:var(--blue)"><div style="font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink3);margin-bottom:4px">Vacation</div><div style="font-family:'DM Serif Display',serif;font-size:20px">$500</div></div>
-          <div class="alloc" style="border-left-color:var(--green)"><div style="font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink3);margin-bottom:4px">Flex</div><div style="font-family:'DM Serif Display',serif;font-size:20px">$1,209</div></div>
+          <div class="alloc" style="border-left-color:var(--green)"><div style="font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink3);margin-bottom:4px">Flex</div><div style="font-family:'DM Serif Display',serif;font-size:20px">$959</div></div>
         </div>
       </div>
     </div>
@@ -241,7 +242,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--paper);color:var(
         <div style="display:flex;align-items:center;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--paper2);font-size:12px"><div style="display:flex;align-items:center;gap:6px"><div style="width:9px;height:9px;border-radius:2px;background:#8a3a8a"></div>Personal</div><span style="font-family:'DM Mono',monospace;font-size:11px">$1,268</span></div>
         <div style="display:flex;align-items:center;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--paper2);font-size:12px"><div style="display:flex;align-items:center;gap:6px"><div style="width:9px;height:9px;border-radius:2px;background:#c9a84c"></div>Transport</div><span style="font-family:'DM Mono',monospace;font-size:11px">$790</span></div>
         <div style="display:flex;align-items:center;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--paper2);font-size:12px"><div style="display:flex;align-items:center;gap:6px"><div style="width:9px;height:9px;border-radius:2px;background:#5a3fa0"></div>Comms</div><span style="font-family:'DM Mono',monospace;font-size:11px">$753</span></div>
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--paper2);font-size:12px"><div style="display:flex;align-items:center;gap:6px"><div style="width:9px;height:9px;border-radius:2px;background:#2a6647"></div>Food</div><span style="font-family:'DM Mono',monospace;font-size:11px">$700</span></div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--paper2);font-size:12px"><div style="display:flex;align-items:center;gap:6px"><div style="width:9px;height:9px;border-radius:2px;background:#2a6647"></div>Food</div><span style="font-family:'DM Mono',monospace;font-size:11px">$950</span></div>
         <div style="display:flex;align-items:center;justify-content:space-between;padding:5px 0;font-size:12px"><div style="display:flex;align-items:center;gap:6px"><div style="width:9px;height:9px;border-radius:2px;background:#2a4a8c"></div>Utilities</div><span style="font-family:'DM Mono',monospace;font-size:11px">$175</span></div>
       </div>
     </div>
@@ -328,7 +329,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--paper);color:var(
   <div class="card full">
     <div class="sl">Variable expenses · ~$1,875/mo combined (not on a fixed date)</div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
-      <div style="background:var(--paper);border-radius:var(--r);padding:12px 14px"><div style="font-size:11px;color:var(--ink3);margin-bottom:6px">Food (shared)</div><div style="font-family:'DM Mono',monospace;font-size:15px">$700</div><div style="font-size:11px;color:var(--ink3);margin-top:3px">Groceries + dining + coffee</div></div>
+      <div style="background:var(--paper);border-radius:var(--r);padding:12px 14px"><div style="font-size:11px;color:var(--ink3);margin-bottom:6px">Food (shared)</div><div style="font-family:'DM Mono',monospace;font-size:15px">$950</div><div style="font-size:11px;color:var(--ink3);margin-top:3px">Groceries + dining + coffee</div></div>
       <div style="background:var(--paper);border-radius:var(--r);padding:12px 14px"><div style="font-size:11px;color:var(--ink3);margin-bottom:6px">Mari personal</div><div style="font-family:'DM Mono',monospace;font-size:15px">$500</div><div style="font-size:11px;color:var(--ink3);margin-top:3px">Hair, nails, beauty</div></div>
       <div style="background:var(--paper);border-radius:var(--r);padding:12px 14px"><div style="font-size:11px;color:var(--ink3);margin-bottom:6px">Brian transport (var)</div><div style="font-family:'DM Mono',monospace;font-size:15px">$200</div><div style="font-size:11px;color:var(--ink3);margin-top:3px">Fuel + Uber + parking</div></div>
       <div style="background:var(--paper);border-radius:var(--r);padding:12px 14px"><div style="font-size:11px;color:var(--ink3);margin-bottom:6px">Household + misc</div><div style="font-family:'DM Mono',monospace;font-size:15px">$475</div><div style="font-size:11px;color:var(--ink3);margin-top:3px">Supplies + medical + buffer</div></div>
@@ -345,7 +346,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--paper);color:var(
   <div style="display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap">
     <div style="background:white;border:1px solid var(--paper3);border-radius:var(--r);padding:10px 16px;font-size:13px"><span class="db"></span>Brian &nbsp;<strong style="font-family:'DM Mono',monospace">$3,368</strong><span style="font-size:11px;color:var(--ink3);margin-left:6px">+$822 payroll</span></div>
     <div style="background:white;border:1px solid var(--paper3);border-radius:var(--r);padding:10px 16px;font-size:13px"><span class="dm"></span>Mari &nbsp;<strong style="font-family:'DM Mono',monospace">$3,956</strong></div>
-    <div style="background:white;border:1px solid var(--paper3);border-radius:var(--r);padding:10px 16px;font-size:13px"><span class="ds"></span>Shared &nbsp;<strong style="font-family:'DM Mono',monospace">$568</strong></div>
+    <div style="background:white;border:1px solid var(--paper3);border-radius:var(--r);padding:10px 16px;font-size:13px"><span class="ds"></span>Shared &nbsp;<strong style="font-family:'DM Mono',monospace">$818</strong></div>
     <div style="background:var(--ink);border-radius:var(--r);padding:10px 16px;font-size:13px;color:var(--paper)">Total &nbsp;<strong style="font-family:'DM Mono',monospace">$8,614</strong></div>
   </div>
 
@@ -408,15 +409,139 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--paper);color:var(
     <table class="etable">
       <thead><tr><th>Expense</th><th>Category</th><th class="r">Due</th><th class="r">Monthly</th><th class="r">Annual</th></tr></thead>
       <tbody>
-        <tr><td>Dining / Takeout</td><td><span class="cb c-food">Food</span></td><td class="due">—</td><td class="r">$250</td><td class="r">$3,000</td></tr>
+        <tr><td>Dining / Takeout</td><td><span class="cb c-food">Food</span></td><td class="due">—</td><td class="r">$500</td><td class="r">$6,000</td></tr>
         <tr><td>Coffee / Fast Food</td><td><span class="cb c-food">Food</span></td><td class="due">—</td><td class="r">$50</td><td class="r">$600</td></tr>
         <tr><td>Household Supplies</td><td><span class="cb c-pers">Personal</span></td><td class="due">—</td><td class="r">$150</td><td class="r">$1,800</td></tr>
         <tr><td>Medical / Health</td><td><span class="cb c-pers">Personal</span></td><td class="due">—</td><td class="r">$35</td><td class="r">$420</td></tr>
         <tr><td>Annual Costs ÷ 12</td><td><span class="cb c-pers">Personal</span></td><td class="due">—</td><td class="r">$33</td><td class="r">$396</td></tr>
         <tr><td>Misc Buffer</td><td><span class="cb c-pers">Personal</span></td><td class="due">—</td><td class="r">$50</td><td class="r">$600</td></tr>
-        <tr class="totrow"><td colspan="3"><strong>Shared total</strong></td><td class="r"><strong>$568</strong></td><td class="r"><strong>$6,816</strong></td></tr>
+        <tr class="totrow"><td colspan="3"><strong>Shared total</strong></td><td class="r"><strong>$818</strong></td><td class="r"><strong>$9,816</strong></td></tr>
       </tbody>
     </table>
+  </div>
+
+</div>
+</div>
+
+
+<!-- ═══════════════ GOALS ═══════════════ -->
+<div id="tab-goals" class="tab-content">
+<div class="page">
+
+  <div class="krow">
+    <div class="kpi"><div class="kpi-a" style="background:#6fcf9a"></div>
+      <div class="kpi-l">Emergency Fund</div><div class="kpi-v">$0</div>
+      <div class="kpi-s">Target $38,142<br>6 months of expenses</div>
+      <div class="pill pg">funded Nov 2027</div></div>
+    <div class="kpi"><div class="kpi-a" style="background:var(--blue)"></div>
+      <div class="kpi-l">Vacation Fund</div><div class="kpi-v">$0</div>
+      <div class="kpi-s">Target $5,000<br>$500/mo contribution</div>
+      <div class="pill pb">funded Feb 2027</div></div>
+    <div class="kpi"><div class="kpi-a" style="background:var(--gold)"></div>
+      <div class="kpi-l">Monthly to Goals</div><div class="kpi-v">$1,500</div>
+      <div class="kpi-s">E-fund $1,000 · Vacation $500<br>starting May 2026</div>
+      <div class="pill py">from monthly surplus</div></div>
+    <div class="kpi"><div class="kpi-a" style="background:var(--purple)"></div>
+      <div class="kpi-l">After Debt Cleared</div><div class="kpi-v">$2,948</div>
+      <div class="kpi-s">E-fund jumps to $2,948/mo<br>from Jan 2027</div>
+      <div class="pill pp">+$1,948 freed from debt</div></div>
+  </div>
+
+  <!-- E-fund progress -->
+  <div class="g2">
+    <div class="card">
+      <div class="sl">Emergency fund · target $38,142</div>
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:6px">
+        <div style="font-family:'DM Serif Display',serif;font-size:32px">$0</div>
+        <div style="font-size:12px;color:var(--ink3)">of $38,142</div>
+      </div>
+      <div style="height:10px;background:var(--paper2);border-radius:5px;overflow:hidden;margin-bottom:8px">
+        <div style="height:100%;width:0%;background:var(--green);border-radius:5px;transition:width 1s ease"></div>
+      </div>
+      <div style="font-size:12px;color:var(--ink3);margin-bottom:16px">0% funded · $38,142 to go</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px">
+        <div style="background:var(--paper);border-radius:var(--r);padding:12px 14px">
+          <div style="font-size:10px;color:var(--ink3);margin-bottom:4px;font-family:'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase">Phase 1 · now–Dec 2026</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:20px">$1,000<span style="font-size:12px;font-family:'Instrument Sans',sans-serif;color:var(--ink3)">/mo</span></div>
+          <div style="font-size:11px;color:var(--ink3);margin-top:3px">From monthly surplus</div>
+        </div>
+        <div style="background:var(--greenl);border-radius:var(--r);padding:12px 14px;border:1px solid #a8d8bc">
+          <div style="font-size:10px;color:var(--green);margin-bottom:4px;font-family:'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase">Phase 2 · Jan 2027+</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:20px;color:var(--green)">$2,948<span style="font-size:12px;font-family:'Instrument Sans',sans-serif;color:var(--green)">/mo</span></div>
+          <div style="font-size:11px;color:var(--green);margin-top:3px">+$1,948 freed from debt</div>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid var(--paper2);padding-top:14px">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:10px">Milestones</div>
+        <div style="display:flex;flex-direction:column;gap:6px;font-size:12px">
+          <div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--paper2)"><span style="color:var(--ink2)">Mini e-fund (1 month)</span><div style="display:flex;gap:12px"><span style="font-family:'DM Mono',monospace;color:var(--ink3)">$6,357</span><span style="font-family:'DM Mono',monospace;color:var(--green)">Sep 2026</span></div></div>
+          <div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--paper2)"><span style="color:var(--ink2)">3 months expenses</span><div style="display:flex;gap:12px"><span style="font-family:'DM Mono',monospace;color:var(--ink3)">$19,071</span><span style="font-family:'DM Mono',monospace;color:var(--green)">Apr 2027</span></div></div>
+          <div style="display:flex;justify-content:space-between;padding:6px 0"><span style="color:var(--ink2);font-weight:600">Full 6 months ✓</span><div style="display:flex;gap:12px"><span style="font-family:'DM Mono',monospace;color:var(--ink3)">$38,142</span><span style="font-family:'DM Mono',monospace;color:var(--green);font-weight:600">Nov 2027</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="sl">Vacation fund · target $5,000</div>
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:6px">
+        <div style="font-family:'DM Serif Display',serif;font-size:32px">$0</div>
+        <div style="font-size:12px;color:var(--ink3)">of $5,000</div>
+      </div>
+      <div style="height:10px;background:var(--paper2);border-radius:5px;overflow:hidden;margin-bottom:8px">
+        <div style="height:100%;width:0%;background:var(--blue);border-radius:5px"></div>
+      </div>
+      <div style="font-size:12px;color:var(--ink3);margin-bottom:16px">0% funded · $5,000 to go</div>
+
+      <div style="background:var(--paper);border-radius:var(--r);padding:12px 14px;margin-bottom:16px">
+        <div style="font-size:10px;color:var(--ink3);margin-bottom:4px;font-family:'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase">Contribution</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:20px">$500<span style="font-size:12px;font-family:'Instrument Sans',sans-serif;color:var(--ink3)">/mo · from surplus</span></div>
+        <div style="font-size:11px;color:var(--ink3);margin-top:3px">Fully funded by February 2027</div>
+      </div>
+
+      <div style="border-top:1px solid var(--paper2);padding-top:14px">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:10px">Monthly build</div>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <div id="vac-bars"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Savings projection chart -->
+  <div class="card full">
+    <div class="sl">Savings projection · May 2026 → Nov 2027</div>
+    <div style="position:relative;height:260px">
+      <canvas id="goalsChart" role="img" aria-label="Area chart showing emergency fund and vacation fund growth from May 2026 to November 2027">Emergency fund grows from $0 to $38,142 by November 2027. Vacation fund reaches $5,000 by February 2027.</canvas>
+    </div>
+  </div>
+
+  <!-- Surplus allocation -->
+  <div class="card full">
+    <div class="sl">Full surplus allocation · $5,181/mo combined</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+      <div style="background:var(--paper);border-radius:var(--r);padding:14px 16px;border-left:3px solid var(--red)">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink3);margin-bottom:6px">Extra debt paydown</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:26px">$2,000</div>
+        <div style="font-size:11px;color:var(--ink3);margin-top:4px">Avalanche → Klarna first</div>
+      </div>
+      <div style="background:var(--paper);border-radius:var(--r);padding:14px 16px;border-left:3px solid var(--green)">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink3);margin-bottom:6px">Emergency fund</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:26px">$1,000</div>
+        <div style="font-size:11px;color:var(--ink3);margin-top:4px">Auto-transfer 1st to HYSA</div>
+      </div>
+      <div style="background:var(--paper);border-radius:var(--r);padding:14px 16px;border-left:3px solid var(--blue)">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink3);margin-bottom:6px">Vacation fund</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:26px">$500</div>
+        <div style="font-size:11px;color:var(--ink3);margin-top:4px">Dedicated savings bucket</div>
+      </div>
+      <div style="background:var(--paper);border-radius:var(--r);padding:14px 16px;border-left:3px solid var(--ink4)">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink3);margin-bottom:6px">Flex / buffer</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:26px">$1,681</div>
+        <div style="font-size:11px;color:var(--ink3);margin-top:4px">Unallocated · adjust as needed</div>
+      </div>
+    </div>
   </div>
 
 </div>
@@ -508,7 +633,7 @@ if(sessionStorage.getItem('af_auth')==='1'){
 document.getElementById('pw').focus();
 
 // Last updated timestamp — set when file is generated
-const LAST_UPDATED = new Date('2026-04-19T23:57:51');
+const LAST_UPDATED = new Date('2026-04-20T00:27:27');
 document.getElementById('last-updated').textContent =
   'Updated ' + LAST_UPDATED.toLocaleDateString('en-US', {month:'short',day:'numeric',year:'numeric'}) +
   ' · ' + LAST_UPDATED.toLocaleTimeString('en-US', {hour:'numeric',minute:'2-digit',hour12:true});
@@ -522,11 +647,12 @@ function showTab(name, btn) {
   document.getElementById('tab-'+name).classList.add('active');
   btn.classList.add('active');
   if(name==='debt'&&!window._dc){buildDebtChart();window._dc=true;}
+  if(name==='goals'&&!window._gc){buildGoalsChart();window._gc=true;}
 }
 function buildBudgetChart(){
   new Chart(document.getElementById('budgetChart'),{type:'doughnut',
     data:{labels:['Housing','Debt','Personal','Transport','Comms','Food','Utilities'],
-    datasets:[{data:[3021,2257,1268,790,753,700,175],
+    datasets:[{data:[3021,2257,1268,790,753,950,175],
     backgroundColor:['#1a1a16','#c23b22','#8a3a8a','#c9a84c','#5a3fa0','#2a6647','#2a4a8c'],
     borderWidth:3,borderColor:'#fff',hoverOffset:5}]},
     options:{responsive:true,maintainAspectRatio:false,cutout:'68%',
@@ -544,6 +670,33 @@ function buildDebtChart(){
     x:{ticks:{autoSkip:false,font:{family:"'DM Mono',monospace",size:11},color:'#7a7a72'},grid:{display:false}}}}});
 }
 buildBudgetChart();
+
+function buildGoalsChart(){
+  const months = ['May 26','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan 27','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov'];
+  const efund =  [1000,2000,3000,4000,5000,6000,7000,8000,10948,13896,16844,19792,22740,25688,28636,31584,34532,37480,38142];
+  const vac =    [500,1000,1500,2000,2500,3000,3500,4000,4500,5000,5000,5000,5000,5000,5000,5000,5000,5000,5000];
+  new Chart(document.getElementById('goalsChart'),{type:'line',
+    data:{labels:months,datasets:[
+      {label:'Emergency Fund',data:efund,borderColor:'#2a6647',backgroundColor:'rgba(42,102,71,0.08)',
+       borderWidth:2.5,fill:true,tension:0.3,pointBackgroundColor:'#2a6647',pointRadius:3,pointHoverRadius:6,
+       pointBorderColor:'#fff',pointBorderWidth:2},
+      {label:'Vacation Fund',data:vac,borderColor:'#2a4a8c',backgroundColor:'rgba(42,74,140,0.06)',
+       borderWidth:2,fill:true,tension:0.3,pointBackgroundColor:'#2a4a8c',pointRadius:3,pointHoverRadius:6,
+       pointBorderColor:'#fff',pointBorderWidth:2}
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{
+        legend:{display:true,position:'top',labels:{usePointStyle:true,pointStyleWidth:10,font:{family:"'DM Mono',monospace",size:10},color:'#7a7a72',padding:20}},
+        tooltip:{callbacks:{label:c=>' $'+c.parsed.y.toLocaleString()}}
+      },
+      scales:{
+        y:{min:0,max:42000,ticks:{callback:v=>'$'+(v/1000).toFixed(0)+'K',font:{family:"'DM Mono',monospace",size:11},color:'#7a7a72'},grid:{color:'#eeeae0'},
+           afterDataLimits(scale){scale.max=42000;}},
+        x:{ticks:{autoSkip:false,maxRotation:45,font:{family:"'DM Mono',monospace",size:10},color:'#7a7a72'},grid:{display:false}}
+      }
+    }
+  });
+}
 </script>
 </body>
 </html>
