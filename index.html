@@ -175,6 +175,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--paper);color:var(
   <button class="navbtn" onclick="showTab('expenses',this)">All Expenses</button>
   <button class="navbtn" onclick="showTab('debt',this)">Debt</button>
   <button class="navbtn" onclick="showTab('goals',this)">Goals</button>
+  <button class="navbtn" onclick="showTab('priorities',this)">Priorities</button>
 </div>
 
 <!-- ═══════════════ OVERVIEW ═══════════════ -->
@@ -559,6 +560,163 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--paper);color:var(
 </div>
 </div>
 
+
+<!-- ═══════════════ PRIORITIES ═══════════════ -->
+<div id="tab-priorities" class="tab-content">
+<div class="page">
+
+  <!-- This week -->
+  <div class="card full">
+    <div class="sl">This week · do now</div>
+    <div style="display:flex;flex-direction:column;gap:0">
+
+      <div style="display:grid;grid-template-columns:32px 1fr auto;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--paper2)">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;color:white;font-weight:500;flex-shrink:0">1</div>
+        <div>
+          <div style="font-weight:500;font-size:14px;margin-bottom:3px">Open the joint account</div>
+          <div style="font-size:12px;color:var(--ink3);line-height:1.5">Everything downstream depends on this. The Zelle system works but it's informal, caused Mari's overdraft, and creates the Cash App loan cycle. One joint account fixes timing gaps, the imbalance, and the micro-loans in one move.</div>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--red);background:var(--redl);padding:3px 8px;border-radius:3px;white-space:nowrap;margin-top:2px">High impact</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:32px 1fr auto;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--paper2)">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;color:white;font-weight:500;flex-shrink:0">2</div>
+        <div>
+          <div style="font-weight:500;font-size:14px;margin-bottom:3px">Cancel duplicate Amazon Prime</div>
+          <div style="font-size:12px;color:var(--ink3);line-height:1.5">Both paying separately — Brian $6.99 (Cash App), Mari $14.99 (Chase) = $21.98/mo for one service. Cancel one. $84/yr saved. Five-minute task.</div>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--red);background:var(--redl);padding:3px 8px;border-radius:3px;white-space:nowrap;margin-top:2px">$84/yr saved</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:32px 1fr auto;gap:12px;align-items:flex-start;padding:14px 0">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;color:white;font-weight:500;flex-shrink:0">3</div>
+        <div>
+          <div style="font-weight:500;font-size:14px;margin-bottom:3px">Verify Spotify accounts</div>
+          <div style="font-size:12px;color:var(--ink3);line-height:1.5">Brian $13.54 (Cash App) + Mari $14.32 (Chase). Confirm if separate accounts or double-billing. Cancel one if duplicate. $162/yr saved.</div>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--red);background:var(--redl);padding:3px 8px;border-radius:3px;white-space:nowrap;margin-top:2px">Quick win</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- This month -->
+  <div class="card full">
+    <div class="sl">This month</div>
+    <div style="display:flex;flex-direction:column;gap:0">
+
+      <div style="display:grid;grid-template-columns:32px 1fr auto;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--paper2)">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;color:white;font-weight:500;flex-shrink:0">4</div>
+        <div>
+          <div style="font-weight:500;font-size:14px;margin-bottom:3px">Set a realistic dining budget</div>
+          <div style="font-size:12px;color:var(--ink3);line-height:1.5">Budget says $500. Statements show $1,272 actual combined. Either adjust behavior toward $500 or reset the budget to reality — right now the surplus figure is overstated by $772/mo.</div>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#7a5500;background:var(--goldl);padding:3px 8px;border-radius:3px;white-space:nowrap;margin-top:2px">$772 gap</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:32px 1fr auto;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--paper2)">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;color:white;font-weight:500;flex-shrink:0">5</div>
+        <div>
+          <div style="font-weight:500;font-size:14px;margin-bottom:3px">Add a shopping budget line</div>
+          <div style="font-size:12px;color:var(--ink3);line-height:1.5">$838/mo in Mari's untracked spending (Amazon, fashion, home goods) plus Brian's Afterpay. Currently invisible in the dashboard. Needs an agreed monthly number.</div>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#7a5500;background:var(--goldl);padding:3px 8px;border-radius:3px;white-space:nowrap;margin-top:2px">Untracked</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:32px 1fr auto;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--paper2)">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;color:white;font-weight:500;flex-shrink:0">6</div>
+        <div>
+          <div style="font-weight:500;font-size:14px;margin-bottom:3px">Stop the Cash App micro-loans</div>
+          <div style="font-size:12px;color:var(--ink3);line-height:1.5">Brian borrowed $125–275/mo in Feb–Mar in $55–100 increments when Chase ran dry. Fix: open joint account + keep $500 float in Brian's checking. Eliminates need entirely.</div>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#7a5500;background:var(--goldl);padding:3px 8px;border-radius:3px;white-space:nowrap;margin-top:2px">Symptom fix</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:32px 1fr auto;gap:12px;align-items:flex-start;padding:14px 0">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;color:white;font-weight:500;flex-shrink:0">7</div>
+        <div>
+          <div style="font-weight:500;font-size:14px;margin-bottom:3px">Enter Self Financial balance</div>
+          <div style="font-size:12px;color:var(--ink3);line-height:1.5">Still shows "?" on the debt tab. Log into the Self app, grab the balance, update the dashboard. 60 seconds.</div>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#7a5500;background:var(--goldl);padding:3px 8px;border-radius:3px;white-space:nowrap;margin-top:2px">60 seconds</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Next 30-60 days -->
+  <div class="card full">
+    <div class="sl">Next 30–60 days</div>
+    <div style="display:flex;flex-direction:column;gap:0">
+
+      <div style="display:grid;grid-template-columns:32px 1fr auto;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--paper2)">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;color:white;font-weight:500;flex-shrink:0">8</div>
+        <div>
+          <div style="font-weight:500;font-size:14px;margin-bottom:3px">Start the emergency fund</div>
+          <div style="font-size:12px;color:var(--ink3);line-height:1.5">$1,000/mo auto-transfer on the 1st to a HYSA (Marcus or Ally). It's in the budget — just needs to actually happen. Target $38,142 (6 months). Funded by Nov 2027.</div>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--green);background:var(--greenl);padding:3px 8px;border-radius:3px;white-space:nowrap;margin-top:2px">Nov 2027 goal</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:32px 1fr auto;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--paper2)">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;color:white;font-weight:500;flex-shrink:0">9</div>
+        <div>
+          <div style="font-weight:500;font-size:14px;margin-bottom:3px">Start the vacation fund</div>
+          <div style="font-size:12px;color:var(--ink3);line-height:1.5">$500/mo into a separate savings bucket. At that rate, $5,000 funded by Feb 2027 — right after Klarna and the car note are gone.</div>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--green);background:var(--greenl);padding:3px 8px;border-radius:3px;white-space:nowrap;margin-top:2px">Feb 2027 goal</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:32px 1fr auto;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--paper2)">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;color:white;font-weight:500;flex-shrink:0">10</div>
+        <div>
+          <div style="font-weight:500;font-size:14px;margin-bottom:3px">Check BestBuy deferred interest expiry</div>
+          <div style="font-size:12px;color:var(--ink3);line-height:1.5">$376 balance. If the promo period ends before it's paid off, all deferred interest hits at once. Log into Citibank/BestBuy app and check the expiry date. Could be time-sensitive.</div>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--green);background:var(--greenl);padding:3px 8px;border-radius:3px;white-space:nowrap;margin-top:2px">Time-sensitive</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:32px 1fr auto;gap:12px;align-items:flex-start;padding:14px 0">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;color:white;font-weight:500;flex-shrink:0">11</div>
+        <div>
+          <div style="font-weight:500;font-size:14px;margin-bottom:3px">Consolidate phone bills</div>
+          <div style="font-size:12px;color:var(--ink3);line-height:1.5">T-Mobile $400 + Verizon $137 + AT&T $66 = <strong>$603/mo</strong> in phone and internet. That's high for two people. Call T-Mobile to explore bundling all lines. Potential savings: $100–200/mo.</div>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--green);background:var(--greenl);padding:3px 8px;border-radius:3px;white-space:nowrap;margin-top:2px">$603/mo today</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Ongoing -->
+  <div class="card full">
+    <div class="sl">Ongoing · monthly habit</div>
+    <div style="display:flex;flex-direction:column;gap:0">
+
+      <div style="display:grid;grid-template-columns:32px 1fr auto;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--paper2)">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;color:white;font-weight:500;flex-shrink:0">12</div>
+        <div>
+          <div style="font-weight:500;font-size:14px;margin-bottom:3px">Monthly balance check-in</div>
+          <div style="font-size:12px;color:var(--ink3);line-height:1.5">Update debt balances once a month. 10 minutes keeps the debt payoff timeline accurate and the dashboard trustworthy for both of you.</div>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--blue);background:var(--bluel);padding:3px 8px;border-radius:3px;white-space:nowrap;margin-top:2px">10 min/mo</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:32px 1fr auto;gap:12px;align-items:flex-start;padding:14px 0">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;color:white;font-weight:500;flex-shrink:0">13</div>
+        <div>
+          <div style="font-weight:500;font-size:14px;margin-bottom:3px">Upload statements monthly</div>
+          <div style="font-size:12px;color:var(--ink3);line-height:1.5">Every month you share Chase + Cash App statements, the dashboard gets updated with real balances, overspend flags, and an accurate picture for both of you. The more consistent, the more useful.</div>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--blue);background:var(--bluel);padding:3px 8px;border-radius:3px;white-space:nowrap;margin-top:2px">Monthly habit</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</div>
+
 <!-- ═══════════════ DEBT ═══════════════ -->
 <div id="tab-debt" class="tab-content">
 <div class="page">
@@ -645,7 +803,7 @@ if(sessionStorage.getItem('af_auth')==='1'){
 document.getElementById('pw').focus();
 
 // Last updated timestamp — set when file is generated
-const LAST_UPDATED = new Date('2026-04-20T00:45:27');
+const LAST_UPDATED = new Date('2026-04-20T00:50:39');
 document.getElementById('last-updated').textContent =
   'Updated ' + LAST_UPDATED.toLocaleDateString('en-US', {month:'short',day:'numeric',year:'numeric'}) +
   ' · ' + LAST_UPDATED.toLocaleTimeString('en-US', {hour:'numeric',minute:'2-digit',hour12:true});
